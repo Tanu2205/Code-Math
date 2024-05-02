@@ -1,0 +1,42 @@
+@keyframes fadeIn {
+    0% {
+        left: -50%;
+      }
+      50% { 
+        left: 5%; 
+       }
+  }
+@keyframes fadeout {
+    0% {
+        right: -30%;
+      }
+      50% { 
+        right: 0%; 
+       }
+  }
+@keyframes fadeout2 {
+    0% {
+        right: 0%;
+      }
+      50% { 
+        right: 27%; 
+       }
+}
+  /* The element to apply the animation to */
+.container{
+    
+    animation: fadeIn 5s;
+  }
+.img{
+    animation: fadeout 5s;
+}
+.img2{
+    animation:fadeout2 5s;
+}
+body{
+    overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
