@@ -11,7 +11,7 @@ const user=require("./models/user.js");
 const course=require("./models/courses.js");
 var flash = require('connect-flash');
 const dbUrl=process.env.ATLASDB_URL;
-
+const d=require("./data/course_data.js");
 var session = require('express-session');
 const MongoStore = require('connect-mongo');
 let passport=require("passport")
@@ -64,9 +64,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 
-
-
-
 app.listen(3000,()=>{
     console.log("Working");
 })
@@ -99,11 +96,8 @@ app.get("/codemath/login",(req,res)=>{
 app.post('/codemath/login',passport.authenticate('local'), 
   async function(req, res) {
         const {username,email,password}=req.body;
-        const curruser=username;
         const p=password;
-        const us=await user.findOne({username:`${username}`})
         const data=await course.find();
-        console.log(us)
         if(req.isAuthenticated()){
             res.render("courses.ejs",{data});
         }

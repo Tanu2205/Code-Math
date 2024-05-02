@@ -235,7 +235,7 @@ const courses=[
         name:"course 1",
         title:"Introduction to Python Programming",
         description:"Dive into the world of data science with Python, one of the most versatile and powerful programming languages in the field. This course is designed for aspiring data scientists and analysts who want to harness the power of Python for data manipulation, analysis, and visualization. You'll learn how to work with popular libraries like NumPy and Pandas for data manipulation, Matplotlib and Seaborn for data visualization, and scikit-learn for machine learning tasks. Whether you're looking to kickstart your career in data science or enhance your analytical skills, this course is your gateway to mastering Python for data science..",
-        quiz:pyquizQuestions,
+        
         image:"https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         lecture:"https://www.youtube.com/embed/vLqTf2b6GZw?si=4hPW9cSwkDSUMmx3"
         ,question:"https://dscet.ac.in/questionbank/science/first-sem/GE8151-PYTHON.pdf"
@@ -244,7 +244,7 @@ const courses=[
         name:"Course 2",
         title:"Full-Stack Web Development with MERN Stack",
         description:"Embark on a journey to become a proficient full-stack web developer with the MERN stack: MongoDB, Express.js, React.js, and Node.js. This comprehensive course covers everything you need to know to build dynamic, modern web applications from scratch. You'll start by mastering the backend with Node.js and Express.js, where you'll build RESTful APIs and handle database operations with MongoDB. Then, you'll dive into frontend development with React.js, creating interactive user interfaces and managing state effectively. By the end of the course, you'll have the skills to develop and deploy full-stack web applications that meet industry standards and impress users.",
-        quiz:mernquizQuestions,
+        
         image:"https://images.unsplash.com/photo-1521185496955-15097b20c5fe?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         lecture:"https://www.youtube.com/embed/HVjjoMvutj4?si=WZ9iSnODGQ7N2Djx"
         ,question:"https://resources.workable.com/wp-content/uploads/2015/08/front-end-web-developer-interview-questions.pdf"
@@ -253,7 +253,7 @@ const courses=[
         name:"Course 3",
         title:"Advanced Data Structures and Algorithms",
         description:"Embark on a journey to master advanced data structures and algorithms, essential skills for any aspiring software engineer or computer scientist. In this comprehensive course, you'll delve deep into the world of data structures and algorithms, exploring complex topics that are crucial for building efficient and scalable software solutions.",
-        quiz:dsaquizQuestions,
+        
         image:"https://plus.unsplash.com/premium_photo-1661878265739-da90bc1af051?q=80&w=1386&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         lecture:"https://www.youtube.com/embed/hCrO_cR7kno?si=h_T0X2nUFsUxoDhC"
         ,question:"https://jeppiaarcollege.org/wp-content/uploads/2019/02/II-YEAR-III-SEM-CS8351-DATA-STRUCTURES.pdf"
