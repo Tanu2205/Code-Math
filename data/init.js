@@ -3,7 +3,7 @@ const initdata=require("./course_data.js");
 const c=require("../models/courses.js");
 
 async function main(){
-    await mongoose.connect('mongodb://127.0.0.1:27017/new');
+    await mongoose.connect();
 }
 main().then(()=>{
     console.log("Connected to db");
