@@ -98,17 +98,15 @@ app.post('/codemath/login',passport.authenticate('local',{
     failureRedirect:"/codemath/login",failureFlash:true
 }), 
   async function(req, res) {
-        const {username,email,password}=req.body;
-        const p=password;
-        const id=username;
-        const data=await course.find();
-        
-
-        res.render("courses.ejs",{data});
+        res.render("/codemath/courses");
         }
             
     
 );
+app.get("/codemath/courses",async (req,res)=>{
+    const data=await course.find();
+    res.render("courses.ejs",{data})
+})
 app.get("/codemath/courses/:id",async (req,res)=>{
     if(req.isAuthenticated()){
     let {id}=req.params;
@@ -136,10 +134,7 @@ app.get("/codemath/lecture/:id",async (req,res)=>{
     res.render("lec.ejs",{q});
     }
 })
-app.get("/codemath/courses",async (req,res)=>{
-    const data=await course.find();
-    res.render("courses.ejs",{data})
-})
+
 app.get("/codemath/course",(req,res)=>{
     if(!req.isAuthenticated()){
         req.flash("error","You must be logged in to see course")
