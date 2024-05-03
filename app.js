@@ -91,6 +91,10 @@ app.post("/codemath/user",async(req,res)=>{
     }
         
 })
+app.get("/codemath/courses",async (req,res)=>{
+    const data=await course.find();
+    res.render("courses.ejs",{data})
+})
 app.get("/codemath/login",(req,res)=>{
     res.render("login.ejs");
 })
@@ -103,10 +107,7 @@ app.post('/codemath/login',passport.authenticate('local',{
             
     
 );
-app.get("/codemath/courses",async (req,res)=>{
-    const data=await course.find();
-    res.render("courses.ejs",{data})
-})
+
 app.get("/codemath/courses/:id",async (req,res)=>{
     if(req.isAuthenticated()){
     let {id}=req.params;
