@@ -102,7 +102,7 @@ app.post('/codemath/login',passport.authenticate('local',{
     failureRedirect:"/codemath/login",failureFlash:true
 }), 
   async function(req, res) {
-        res.render("/codemath/courses");
+        res.redirect("/codemath/courses");
         }
             
     
