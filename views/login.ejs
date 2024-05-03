@@ -1,8 +1,8 @@
 
 <% layout('./layout/boilerplate') -%>
-<% if (success && success.length) { %>
-  <div class="alert alert-success" role="alert" width="50">
-    <%= success %>
+<% if (failure && failure.length) { %>
+  <div class="alert alert-danger" role="alert" width="50">
+    <%= failure %>
   </div>
 <% } %>
 <body>

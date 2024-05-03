@@ -40,6 +40,7 @@ app.use(flash());
 app.use((req,res,next)=>{
     res.locals.success=req.flash("success");
     res.locals.error=req.flash("error");
+    res.locals.failureFlash=req.flash("failure")
     res.locals.curruser=req.user;
     next();
 })
@@ -102,7 +103,7 @@ app.post('/codemath/login',passport.authenticate('local',{
         const id=username;
         const data=await course.find();
         
-
+        
         res.render("courses.ejs",{data});
         }
             
