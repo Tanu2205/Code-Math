@@ -93,27 +93,21 @@ app.post("/codemath/user",async(req,res)=>{
 app.get("/codemath/login",(req,res)=>{
     res.render("login.ejs");
 })
-app.post('/codemath/login',passport.authenticate('local'), 
+app.post('/codemath/login',passport.authenticate('local',{
+    failureRedirect:"/codemath/login",failureFlash:true
+}), 
   async function(req, res) {
         const {username,email,password}=req.body;
+        const p=password;
+        const id=username;
+        const data=await course.find();
         
-        if(!req.isAuthenticated()){
-            req.flash("success","Password or username is not correct, please try again")
-            res.redirect("/codemath")
-            
-        }
 
-        else{
-            const p=password;
-            const id=username;
-            const data=await course.find();
-            const curruser=await user.findOne({username:`${id}`});
-
-            res.render("courses.ejs",{data,curruser});
+        res.render("courses.ejs",{data});
         }
             
     
-});
+);
 app.get("/codemath/courses/:id",async (req,res)=>{
     if(req.isAuthenticated()){
     let {id}=req.params;
