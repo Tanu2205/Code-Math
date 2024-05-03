@@ -98,7 +98,6 @@ app.post('/codemath/login',passport.authenticate('local',{
     failureRedirect:"/codemath/login",failureFlash:true
 }), 
   async function(req, res) {
-        req.flash("failure","P");
 
         const {username,email,password}=req.body;
         const p=password;
