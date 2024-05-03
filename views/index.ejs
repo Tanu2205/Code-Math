@@ -21,8 +21,9 @@
     <% if (error && error.length) { %>
       <div class="alert alert-danger alert-dismissible fade show" role="alert" style="height: 2%; display: flex; justify-content: center; width:50%; position: absolute; top:2%; left:20%">
         <p style="position: absolute; top:1%"><%= error %></p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      
     <% } %>
     <header class="p-3" style="background-color:rgba(39,110,107,200) ; height: 20%;">
         <div class="container">
