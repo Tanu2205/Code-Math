@@ -96,14 +96,20 @@ app.get("/codemath/login",(req,res)=>{
 app.post('/codemath/login',passport.authenticate('local'), 
   async function(req, res) {
         const {username,email,password}=req.body;
-        const p=password;
-        const data=await course.find();
-        if(req.isAuthenticated()){
-            res.render("courses.ejs",{data});
-        }
-        else{
-            req.flash("error","Password is not correct, please try again")
+        
+        if(!req.isAuthenticated()){
+            req.flash("success","Password or username is not correct, please try again")
             res.redirect("/codemath")
+            
+        }
+
+        else{
+            const p=password;
+            const id=username;
+            const data=await course.find();
+            const curruser=await user.findOne({username:`${id}`});
+
+            res.render("courses.ejs",{data,curruser});
         }
             
     
